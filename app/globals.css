@@ -1,0 +1,292 @@
+:root {
+  color-scheme: light;
+  font-family: "Georgia", "Times New Roman", serif;
+  background: linear-gradient(120deg, #f4efe9 0%, #f7f2e9 45%, #f9f8f5 100%);
+  color: #2e2721;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header h1 {
+  font-size: 44px;
+  margin: 0 0 4px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.auth-screen {
+  min-height: 70vh;
+  align-content: center;
+  justify-items: center;
+}
+
+.panel {
+  background: #fffaf2;
+  border: 1px solid #e0d8c8;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 24px rgba(97, 80, 63, 0.08);
+}
+
+.auth-panel {
+  width: min(460px, 100%);
+  text-align: center;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-horizontal {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+input,
+textarea {
+  border: 1px solid #d8cdbf;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 16px;
+  background: #fffdfa;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #2e2721;
+  color: #fffaf2;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.tiny {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.ghost {
+  background: transparent;
+  color: #2e2721;
+  border: 1px solid #d8cdbf;
+}
+
+.status {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.note {
+  border: 1px dashed #d8cdbf;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.account-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #e0d8c8;
+  background: #fffaf2;
+  font-size: 12px;
+}
+
+.account-title {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #7d6f5f;
+  margin-bottom: 2px;
+}
+
+.account-email {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.user-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-title {
+  margin: 0 0 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.user-email {
+  margin: 0;
+  font-weight: 600;
+}
+
+.cases {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.case-card {
+  border: 1px solid #e0d8c8;
+  border-radius: 16px;
+  padding: 16px;
+  background: #fffdf7;
+  display: grid;
+  gap: 8px;
+}
+
+.case-card h3 {
+  margin: 0 0 6px;
+}
+
+.case-card p {
+  margin: 6px 0;
+}
+
+.panel-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.search input {
+  min-width: 220px;
+}
+
+.pagination {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.photo {
+  margin-top: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e0d8c8;
+  background: #fffdfa;
+}
+
+.photo-preview {
+  display: grid;
+  gap: 12px;
+  border-radius: 16px;
+  border: 1px dashed #d8cdbf;
+  padding: 12px;
+}
+
+.photo-preview img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.photo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 320px;
+}
+
+@media (max-width: 1100px) {
+  .cases {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .cases {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .form-horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2 {
+    grid-column: span 1;
+  }
+
+  .header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .account-chip {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
