@@ -33,7 +33,7 @@ export default function HomePage() {
   const [authStatus, setAuthStatus] = useState("");
   const [user, setUser] = useState(null);
 
-  const apiUrl = "";
+  const apiUrl = "/api";
 
   const isAuthenticated = useMemo(() => Boolean(user), [user]);
 
