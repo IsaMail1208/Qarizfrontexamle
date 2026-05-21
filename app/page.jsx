@@ -33,7 +33,7 @@ export default function HomePage() {
   const [authStatus, setAuthStatus] = useState("");
   const [user, setUser] = useState(null);
 
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  const apiUrl = "";
 
   const isAuthenticated = useMemo(() => Boolean(user), [user]);
 
